@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo's Portfolio</title>
+    <style>
+        :root {
+            --background: #000;
+            --foreground: #fff;
+            --accent: #0070f3;
+            --secondary: #888;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            background-color: var(--background);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        nav a {
+            color: var(--foreground);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .hero {
+            margin-bottom: 4rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            color: var(--secondary);
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project {
+            background-color: #111;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 112, 243, 0.1);
+        }
+        .project h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        .project p {
+            color: var(--secondary);
+        }
+        .cta {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--background);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .cta:hover {
+            background-color: #0050a3;
+        }
+        #about p, #contact p {
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Leo</div>
+            <nav>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Hi, I'm Leo X</h1>
+                <p>A passionate developer creating elegant solutions for complex problems. Specializing in web development and user experience design.</p>
+                <a href="#contact" class="cta">Get in touch</a>
+            </section>
+
+            <section id="projects" class="projects">
+                <div class="project">
+                    <h3>Project One</h3>
+                    <p>A responsive web application for task management, built with React and Node.js.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Two</h3>
+                    <p>An e-commerce platform optimized for performance and SEO, using Next.js and Stripe.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Three</h3>
+                    <p>A real-time chat application with end-to-end encryption, built on WebSocket technology.</p>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>About Me</h2>
+                <p>With over 5 years of experience in web development, I'm passionate about creating intuitive and efficient digital experiences. My expertise includes JavaScript, React, Node.js, and modern web technologies.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Get in Touch</h2>
+                <p>Interested in working together? Feel free to reach out!</p>
+                <a href="mailto:leo@example.com" class="cta">Contact Me</a>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
